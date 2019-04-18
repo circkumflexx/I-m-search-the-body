@@ -1,0 +1,32 @@
+{% extends './index.html' %}
+{% block content %}
+<div class="row">
+    <div class="section">
+        <h3>Мародёрам не досталось, а вам досталось:</h3>
+    </div>
+</div>
+<div class="row notice">
+    <div class="section">
+        <div class="notice-message">
+            <div class="notice-text x2">{{ item }}</div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="section">
+        <div class="autogrid tabs-block">
+            {% for profession in all_bodies %}
+                {% if profession.prof_index == current_body %}
+                    <div class="col here">
+                        <a href="{% url profession.prof_index %}">{{ profession.profession_rus }}</a>
+                    </div>
+                {% else %}
+                    <div class="col">
+                        <a href="{% url profession.prof_index %}">{{ profession.profession_rus }}</a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

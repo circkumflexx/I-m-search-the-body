@@ -1,0 +1,22 @@
+{% load static %}
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="{% static 'css/vital.css' %}">
+    <meta charset="UTF-8">
+    <title>OSR :: Обыскиваю тело</title>
+</head>
+<body>
+    <div class="row bg-black light-text">
+        <div class="section center">
+            <h1>Обыскиваю тело</h1>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock content %}
+    <div class="row">
+        <div class="section center">
+            <p>(Нажмие на категорию, которая больше всего подходит найденному трупу.)</p>
+        </div>
+    </div>
+</body>
+</html>
